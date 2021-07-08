@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+<title>TAKE A TRIP</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+
+    body {font-family: "Times New Roman", Georgia, Serif;}
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Playfair Display";
+      letter-spacing: 5px;
+    }
+
+   html{
+     border: 30px solid lime;
+   }
+
+  /*packages*/
+  .pack{
+    position:relative;
+}
+.pack{
+  margin: 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap:10%;
+}
+
+.pack .picture{
+    width: 280px;
+    background-color: rgb(231, 231, 231);
+    font-family: sans-serif;
+    transition: 0.8s ease;
+}
+.pack .picture img{
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.pack .picture .text{
+    margin: 1rem;
+}
+.pack .picture button{
+    border: none;
+    outline: none;
+    padding: 0.6rem 1rem;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.pack .picture button:hover{
+    background-color: yellow;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    color: black;
+    
+}
+
+ /* Button for slide*/
+    .button {
+  background-color:black;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1{
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button1:hover {
+  background-color: #555555;
+  color: white;
+}
+
+.button2 {
+  background-color:yellowgreen;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button2:hover {
+  background-color: #555555;
+  color: white;
+}
+
+
+.button3 {
+  background-color:black;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button4{
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button4:hover {
+  background-color: #555555;
+  color: white;
+} 
+
+
+
+
+/*Explore slide  */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/*Video section  */
+
+#videoal div.video {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    width: 285px;
+    height: 260px;
+}
+
+#videoal div.video video {
+    width: 100%;
+    height: 100%;
+}
+
+.video{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background:wheat;
+}
+
+/*Team*/
+.team .member .member-img {
+  position:relative;
+  overflow: hidden;
+}
+.team .member .social {
+  position:absolute;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  text-align: center;
+}
+
+.team .member .social a {
+  transition: color 0.3s;
+  color: #111111;
+  margin: 0 3px;
+  padding-top: 7px;
+  border-radius: 50px;
+  width: 36px;
+  height: 36px;
+  background: #e03a3c;
+  display: inline-block;
+  transition: ease-in-out 0.3s;
+  color: #fff;
+}
+.team .member:hover .social {
+  opacity: 1;
+  bottom: 15px;
+}
+
+/*newsletter*/
+.news{
+    position: relative;
+    background-image: url("news.jpg");
+    background-position: center;
+    width: 100%;
+    height: 200px;
+}
+.news h1{
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    font-size: 48px;
+    padding-top: 1rem;
+}
+form{
+    width: 100%;
+    text-align: center;
+}
+.news input[type="email"]{
+    outline: none;
+    border: none;
+    width: 400px;
+    height: 2rem;
+    padding: 0.4rem;
+    font-size: 15px;
+}
+.news input[type="submit"]:hover{
+    background-color:yellow;
+    color:purple;
+}
+
+
+/*blog*/
+.blog{
+    position:relative;
+}
+.blog{
+  margin: 1rem;
+  display:flex;
+  justify-content: space-around;
+}
+
+.blog .picture{
+    width: 280px;
+    background-color: rgb(231, 231, 231);
+    font-family: sans-serif;
+    transition: 0.8s ease;
+}
+.blog .picture img{
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog .picture .text{
+    margin: 1rem;
+}
+.blog .picture button{
+    border: none;
+    outline: none;
+    padding: 0.6rem 1rem;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.blog .picture button:hover{
+    background-color: yellow;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    color: black;
+    
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .packages {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 985px) {
+.toggle{
+    display: none;
+}
+}
+@media screen and (max-width: 950px) {
+    .navigation{
+       display: none;
+    }
+    .toggle{
+        position: relative;
+        cursor: pointer;
+    }
+}
+
+
+</style>
+
+<body>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+
+<div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+      <a href="#home" class="w3-bar-item w3-button">TAKE A TRIP</a>
+      <!-- Right-sided navbar links. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a href="#home" class="w3-bar-item w3-button">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="#packages" class="w3-bar-item w3-button">PACKAGES</a>
+        <a href="#explore" class="w3-bar-item w3-button">EXPLORE</a>
+        <a href="#video" class="w3-bar-item w3-button">VIDEO</a>
+        <a href="#team" class="w3-bar-item w3-button">TEAM</a>
+        <a href="#blog" class="w3-bar-item w3-button">BLOG</a>
+        <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="#home" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+    <a href="#packages" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PACKAGES</a>
+    <a href="#explore" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">EXPLORE</a>
+    <a href="#video" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">VIDEO</a>
+    <a href="#team" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TEAM</a>
+    <a href="#blog" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BLOG</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+    
+  </div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px">
+
+    <!-- Automatic Slideshow Images -->
+    <div class="w3-row w3-padding-64" id="home">
+    <div class="mySlides w3-display-container w3-center">
+      <img src="picture1.jpg" style="width:100%";>
+      <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h1>TAKE A TRIP</h1>
+        <h3><b>Kerala</b>: God's Own Country</h3>   
+        <button class="button button1">Explore</button>
+      </div>
+    </div>
+    <div class="mySlides w3-display-container w3-center">
+      <img src="slide2.jpg" style="width:100%">
+      <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h1>TAKE A TRIP</h1>
+        <h3>Explore Kerala with us!! </h3>  
+        <button class="button button1">Explore</button> 
+      </div>
+    </div>
+    <div class="mySlides w3-display-container w3-center">
+      <img src="slide3.jpg" style="width:100%">
+      <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h1>TAKE A TRIP</h1>
+         <h3><b>Kerala</b>: God's Own Country</h3> 
+         <button class="button button1">Explore</button> 
+      </div>
+    </div>
+    <div class="mySlides w3-display-container w3-center">
+        <img src="slide4.jpg" style="width:100%">
+        <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+            <h1>TAKE A TRIP</h1>
+            <h3>Explore Kerala with us !! </h3>
+            <button class="button button1">Explore</button>
+        </div>
+      </div>
+    </div>
+
+       <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="about.jpg" class="w3-round w3-image w3-opacity-min" alt="kerala" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center"><b>ABOUT</b></h1><br>
+      <h5 class="w3-center">Since 1999</h5>
+      <p class="w3-large"> TakeATrip.com is an online travel platform.The Kottayam based company, with a strong presence 
+          in inbound travel and tourism and corporate segment, today has excelled its branches over Kochi, Trivandrum, Kozhikode, Thrissur, Kollam, Alappuzha and Kannur. 
+          The company with its professionally managed travel engine specializes mainly in organizing Adventure, Cultural,
+           Religious, hill station & wildlife tours exclusively in Kerala through a sprawling network. </p>
+          </div>
+  </div>
+
+
+ <!-- Packages -->
+  <div class="w3-content w3-container w3-padding-64" id="packages">
+    <h1 class="w3-center"><b>PACKAGES</b></h1><br> <br>
+
+    <section class="pack">
+      <div class="picture">
+          <img src="incredible.jpg" alt="">
+          <div class="text">
+            <h4><b style='color:green;'>INCREDIBLE KERALA TOUR</b></h4>
+              <p>- Place To Visit: MUNNAR <br>
+                - 3-Day 2-Night <br>
+                - Meals <br>
+                - Sightseeing <br>
+                - Accomodation <br></p>
+              <button>5999/- INR</button>
+          </div>
+      </div>
+      <div class="picture">
+          <img src="dazzling.jpeg" alt="">
+          <div class="text">
+            <h4><b style='color:green;'>DAZZLING KERALA TOUR</b></h4>
+              <p>- Place To Visit: MUNNAR,ALLEPEY <br>
+                - 4-Day 3-Night <br>
+                - Meals <br>
+                - Sightseeing <br>
+                - Accomodation <br></p>
+              <button>9999/- INR</button>
+          </div>
+      </div>
+      <div class="picture">
+          <img src="bewitching.jpg" alt="">
+          <div class="text">
+            <h4><b style='color:green;'>BEWITCHING KERALA TOUR</b></h4>
+            <p>- Place To Visit:VAGAMON <br>
+                - 5-Day 4-Night <br>
+                - Meals <br>
+                - Sightseeing <br>
+                - Accomodation <br></p>
+              <button>10999/- INR</button>
+          </div>
+      </div>
+      <div class="picture">
+          <img src="magical.jpg" alt="">
+          <div class="text">
+            <h4><b style='color:green;'>MAGICAL KERALA TOUR</b></h4>
+              <p>- Place To Visit: MUNNAR <br>
+                - 6-Day 5-Night <br>
+                - Meals <br>
+                - Sightseeing <br>
+                - Accomodation <br></p>
+              <button>11999/- INR</button>
+          </div>
+      </div>
+  </section>
+
+
+           <!-- Explore section -->
+            <div class="w3-content w3-container w3-padding-64" id="explore">
+                <h1 class="w3-center"><b>EXPLORE</b></h1><br> <br>
+
+                <div class="container">
+                    <div class="mySlides">
+                      <img src="alleppey.jpg" style="width:100%">
+                    </div>
+                  
+                    <div class="mySlides">
+                      <img src="cochin.jpg" style="width:100%">
+                    </div>
+                  
+                    <div class="mySlides">
+                      <img src="kovalam.jpg" style="width:100%">
+                    </div>
+                      
+                    <div class="mySlides">
+                      <img src="kumarakom.jpg" style="width:100%">
+                    </div>
+                  
+                    <div class="mySlides">
+                      <img src="munnar.png" style="width:100%">
+                    </div>
+                      
+                    <div class="mySlides">
+                      <img src="wayanad.jpg" style="width:100%">
+                    </div>
+                      
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                  
+                    <div class="caption-container">
+                      <p id="caption"></p>
+                    </div>
+                  
+                    <div class="row">
+                      <div class="column">
+                        <img class="demo cursor" src="alleppey.jpg" style="width:100%" onclick="currentSlide(1)" alt="ALLEPEY">
+                      </div>
+                      <div class="column">
+                        <img class="demo cursor" src="cochin.jpg" style="width:100%" onclick="currentSlide(2)" alt="COCHIN">
+                      </div>
+                      <div class="column">
+                        <img class="demo cursor" src="kovalam.jpg" style="width:100%" onclick="currentSlide(3)" alt="KOVALAM">
+                      </div>
+                      <div class="column">
+                        <img class="demo cursor" src="kumarakom.jpg" style="width:100%" onclick="currentSlide(4)" alt="KUMARAKOM">
+                      </div>
+                      <div class="column">
+                        <img class="demo cursor" src="munnar.png" style="width:100%" onclick="currentSlide(5)" alt="MUNNAR">
+                      </div>    
+                      <div class="column">
+                        <img class="demo cursor" src="wayanad.jpg" style="width:100%" onclick="currentSlide(6)" alt="WAYANAD">
+                      </div>
+                    </div>
+                  </div> 
+     
+
+                  <!-- Video Tour -->
+                  <div class="color";>
+                 <div class="w3-content w3-container w3-padding-64" id="video">
+                    <h1 class="w3-center"><b>VIDEO TOUR</b></h1><br> <br>
+                    <div class="w3-row-padding w3-center">
+
+                  <!--blocks of videos  -->
+                  <div id="videoal">
+                    <div class="video">
+                        <video autoplay muted loop>
+                            <source src="video1.mp4" type="video/mp4">
+                            <source src="video1.ogg" type="video/ogg">
+                        </video>
+                    </div>
+                    <div class="video">
+                       <video autoplay muted loop >
+                           <source src="video2.mp4" type="video/mp4">
+                           <source src="video2.ogg" type="video/ogg">
+                       </video>
+                    </div>
+                    <div class="video">
+                    <video autoplay muted loop >
+                        <source src="video3.mp4" type="video/mp4">
+                        <source src="video3.ogg" type="video/ogg">
+                    </video>
+                    </div>
+                </div>
+                    </div>
+
+               <!-- Team -->
+              <div class="w3-content w3-container w3-padding-64" id="team">
+                <h1 class="w3-center"><b>TEAM</b></h1><br> <br>
+                <div class="w3-row-padding w3-center">
+
+               <section id="team" class="team section-bg">
+                <div class="container" >
+          
+                  <div class="section-title">
+                  </div>
+          
+                  <div class="row">
+          
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                      <div class="member"  >
+                        <div class="member-img">
+                          <img src="team1.jpg" class="img-fluid" alt="">
+                          <div class="social">
+                            <a href=""><i class="fa fa-facebook-f"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                            <a href=""><i class="fa fa-github"></i></a>
+                            <a href=""><i class="fa fa-envelope"></i></a>
+                          </div>
+                        </div>
+                          <h4>John Doe</h4>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                        <div class="member"  >
+                          <div class="member-img">
+                            <img src="team2.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                              <a href=""><i class="fa fa-facebook-f"></i></a>
+                              <a href=""><i class="fa fa-linkedin"></i></a>
+                              <a href=""><i class="fa fa-github"></i></a>
+                              <a href=""><i class="fa fa-envelope"></i></a>
+                            </div>
+                          </div>
+                            <h4>Jane Doe</h4>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                          <div class="member"  >
+                            <div class="member-img">
+                              <img src="team3.jpg" class="img-fluid"alt="">
+                              <div class="social">
+                                <a href=""><i class="fa fa-facebook-f"></i></a>
+                                <a href=""><i class="fa fa-linkedin"></i></a>
+                                <a href=""><i class="fa fa-github"></i></a>
+                                <a href=""><i class="fa fa-envelope"></i></a>
+                              </div>
+                            </div>
+                              <h4>Mike Ross</h4>
+                            </div>
+                          </div>
+                  
+                    </div>
+                    <br> <br> 
+
+                   
+                    <!-- Newsletter Section-->
+
+                    <section class="news"> 
+                      <h1><b>Newsletter Signup</b></h1>
+                      <form action="#">
+                          <input type="email" placeholder="Email" >
+                          <input type="submit" value="Sign up">
+                      </form>
+                  </section>
+              
+         
+         
+                    
+        <!-- Blog Section-->
+         <div class="w3-content w3-container w3-padding-64" id="blog">
+           <h1 class="w3-center"><b>BLOG</b></h1><br> <br>
+
+     <section class="blog">
+      <div class="picture">
+          <img src="blog1.jpg" alt="">
+          <div class="text">
+              <p><h5>8 Places to visit near Athirapally Falls.</h5></p>
+              <button>Learn More</button>
+          </div>
+      </div>
+      <div class="picture">
+          <img src="blog2.jpg" alt="">
+          <div class="text">
+            <p><h5>Best Hotels In Thrissur for both budget and luxury travellers.</h5></p>
+              <button>Learn More</button>
+          </div>
+      </div>
+      <div class="picture">
+          <img src="blog3.jpg" alt="">
+          <div class="text">
+          <p><h5>Ziplinig in Wayanad:Find Adventure at the heart of Kerala.</h5></p>
+              <button>Learn More</button>
+          </div>
+      </div>
+      <div class="picture">
+          <img src="blog4.jpg" alt="">
+          <div class="text">
+            <p><h5>Visit these sacred temples in Guruvayur for a wholesome vacation. </h5></p>
+              <button>Learn More</button>
+          </div>
+      </div>
+  </section>
+  
+  
+  <!-- Contact Section-->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+        <h1 class="w3-center"> <b>CONTACT</b> </h1>
+        <p class="w3-center"></p>
+
+        <div class="w3-row w3-padding w3-section">
+            <div class="w3-col m4 w3-container">
+                <img src="map1.jpg" width="240px" height="300px">
+            </div>
+            <div class="w3-col m8 w3-panel">
+                <div class="w3-large w3-margin-bottom">
+                <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Kerala,India <br>
+                <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>      Phone: +91-8296170232<br>
+                <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>   Email: takeatrip@gmail.com<br>
+                </div>
+                <p> <h4>Drop your enquires below : </h4></p>
+                <form action="/action_page.php" target="_blank">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                        </div>
+                      </div>
+                    <input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"><br>
+                    <input class="w3-input w3-border" type="text" placeholder="Comment" required name="Comment"> 
+                    <button class="w3-button w3-black w3-right w3-section" type="submit">
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+ 
+     <!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+   <p>Designed by <b style='color:MediumSeaGreen;'>Srividya</b>
+  </footer>
+
+                 <script>
+                  var slideIndex = 1;
+                  showSlides(slideIndex);
+                  
+                  function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                  }
+                  
+                  function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                  }
+                  
+                  function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("demo");
+                    var captionText = document.getElementById("caption");
+                    if (n > slides.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                    captionText.innerHTML = dots[slideIndex-1].alt;
+                  }
+
+        // Automatic Slideshow - change image every 4 seconds
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 4000);    
+        }
+
+         // Modal Image Gallery
+         function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+
+      // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+
+       </script>
+        
+        </body>
+        </html>
+        
+
