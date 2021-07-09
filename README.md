@@ -13,7 +13,13 @@ Implentation :
 
 
 
+
+
+
 ![snap2](https://github.com/srividya-03/LGMVIP-JULY2021_TASK1/blob/main/snap2.png) 
+
+
+
 
 
 
@@ -21,7 +27,13 @@ Implentation :
 
 
 
+
+
+
 ![snap4](https://github.com/srividya-03/LGMVIP-JULY2021_TASK1/blob/main/snap4.png)
+
+
+
 
 
 
@@ -29,7 +41,13 @@ Implentation :
 
 
 
+
+
+
 ![snap6](https://github.com/srividya-03/LGMVIP-JULY2021_TASK1/blob/main/snap6.png)
+
+
+
 
 
 
@@ -39,7 +57,13 @@ Implentation :
 
 
 
+
+
+
 ![snap8](https://github.com/srividya-03/LGMVIP-JULY2021_TASK1/blob/main/snap8.png)
+
+
+
 
 
 
@@ -49,12 +73,21 @@ Implentation :
 
 
 
+
+
+
 ![snap10](https://github.com/srividya-03/LGMVIP-JULY2021_TASK1/blob/main/snap10.png)
 
 
 
 
+
+
+
 ![snap11](https://github.com/srividya-03/LGMVIP-JULY2021_TASK1/blob/main/snap11.png)
+
+
+
 
 
 
