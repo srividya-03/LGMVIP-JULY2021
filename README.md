@@ -5,7 +5,7 @@
 ## To create a Single Page Website using **HTML, CSS, JAVASCRIPT**
 
 
-Implentation :
+Implemntation :
 
 
 
